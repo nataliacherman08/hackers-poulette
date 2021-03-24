@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    <?php include 'cible.php'?>
+
+    <?php
+        $countries = [
+            "BE" => "Belgium",
+            "FR" => "France",
+            "NL" => "Netherlands",
+            "DE" => "Germany",
+            "LU" => "Luxembourg"
+        ]
+    ?>
     <!--NavBar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -43,63 +54,81 @@
         <section class='left-col'>
         </section>
 
-        <div class="right-col">
+        <div class='right-col'>
                 <h1>We want hear from you</h1>
-                    <form>
-                        <div class="col-md-12">
-                            <label for="validationDefault01" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="validationDefault01" required>
-                        </div>
 
-                        <div class="col-md-12">
-                            <label for="validationDefault02" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="validationDefault02" required>
-                        </div>
+                <!--Form-->
+                    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Woman
+                    <!--Firstname-->
+                    <div class="form-group">
+                        <label for="firstname" class="form-label">First name :</label>
+                        <input type="text" class="form-control" name="firstname" id="firstname">
+                        <span class="error">* <?php echo $firstnameErr?></span>
+                    </div>
+
+                    <!--Lastname-->
+                    <div class="form-group">
+                        <label for="lastname" class="form-label">Last name :</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname">
+                        <span class="error">* <?php echo $lastnameErr?></span>
+                    </div>
+
+                    <!--Gender-->
+                    <div>
+                        <label for="gender">Gender :</label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input " name="gender" value="male"> MALE
+                            <input type="radio" class="form-check-input" name="gender" value="female"> FEMALE
+                            <input type="radio" class="form-check-input" name="gender" value="other"> OTHER
                             </label>
                         </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Man
-                            </label>
-                        </div>
+                        <span class="error">* <?php echo $genderErr?></span>
+                    </div>
 
-                        <div class="col-md-12">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-                        </div>
+                    <!--Email-->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email address:</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                        <span class="error">* <?php echo $emailErr?></span>
+                    </div>
 
-                        <div class="col-md-12">
-                            <label for="validationDefault04" class="form-label">Country</label>
-                            <select class="form-select" id="validationDefault04" required>
-                                <option value="1">Belgium</option>
-                                <option value="2">France</option>
-                                <option value="3">Germany</option>
-                            </select>
-                        </div>
+                    <!--Country-->
+                    <div class="form-group">
+                        <label for="country" class="form-label">Country :</label>
+                        <select class="form-select" name="country" id="country">
+                            <option disabled">Choose a country</option>
+                            <?php
+                            foreach($countries as $key => $value){
+                                echo '<option value="'.$key.'">'.$value.'</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
 
-                        <div class="col-md-12">
-                            <label for="validationDefault04" class="form-label">Subject</label>
-                            <select class="form-select" id="validationDefault04" required>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
+                    <!--Subject-->
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject :</label>
+                        <select class="form-select" name="subject" id="subject">
+                            <option disabled">Choose a subject</option>
+                            <option value="questions">Questions</option>
+                            <option value="comments">Comments</option>
+                            <option value="suggestions">Suggestions</option>
+                        </select>
+                    </div>
 
-                        <div class="col-md-12">
-                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
+                    <!--Message-->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your message :</label>
+                        <textarea class="form-control" id="textArea" rows="3" placeholder="Type your message" name="message"></textarea>
+                        <span class="error">* <?php echo $messageErr?></span>
+                    </div>
 
-                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    <!--Submit-->
+                    <button type="submit" class="btn btn-secondary">Submit</button>
                     </form>
-                </div>
+        </div>
 
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">

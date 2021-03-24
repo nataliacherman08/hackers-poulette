@@ -58,6 +58,10 @@
     padding: 2rem 3.5rem;
 }
 
+.error
+{
+    color: #742323;
+}
 
 h1 
 {
@@ -160,43 +164,36 @@ input:checked + .slider:before
 
 //Responsive=============================================================================================
 @media only screen and (max-width: 950px) {
-.logo 
-{
-width: 5rem;
-}
+    .logo {
+    width: 5rem;
+    }
 
-h1 
-{
+    h1 {
     font-size: 1.75rem;
-}
+    }
 
-p
-{
+    p  {
     font-size: 0.7rem;
-}
-.description
-{
-    font-size: 0.7rem;
-}
+    }
 
-.theme-switch-wrapper 
-{
+    .description {
+    font-size: 0.7rem;
+    }
+
+    .theme-switch-wrapper {
     width: 120px;
-}
+    }
 
-.theme-switch 
-{
+    .theme-switch {
     height: 28px;
     width: 50px;
-}
+    }
 
-.theme-switch input 
-{
+    .theme-switch input {
     display:none;
-}
+    }
 
-.slider:before 
-{
+    .slider:before {
     background-color: #fff;
     bottom: 0.25rem;
     content: "";
@@ -205,21 +202,18 @@ p
     left: 0.25rem;
     position: absolute;
     transition: .4s;
-}
+    }
 
-input:checked + .slider:before 
-{
-transform: translateX(16px);
-}
+    input:checked + .slider:before {
+    transform: translateX(16px);
+    }
 
-.slider.round 
-{
-    border-radius: 15px;
-}
+    .slider.round {
+        border-radius: 15px;
+    }
 
-.slider.round:before 
-{
-    border-radius: 50%;
-}
+    .slider.round:before {
+        border-radius: 50%;
+    }
 
 }

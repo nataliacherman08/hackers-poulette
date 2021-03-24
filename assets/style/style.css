@@ -53,6 +53,10 @@
   padding: 2rem 3.5rem;
 }
 
+.error {
+  color: #742323;
+}
+
 h1 {
   color: var(--h1-color);
   text-transform: uppercase;
