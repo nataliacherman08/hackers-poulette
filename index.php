@@ -62,14 +62,14 @@
 
                     <!--Firstname-->
                     <div class="form-group">
-                        <label for="firstname" class="form-label">First name :</label>
+                        <label for="firstname">First name :</label>
                         <input type="text" class="form-control" name="firstname" id="firstname">
                         <span class="error">* <?php echo $firstnameErr?></span>
                     </div>
 
                     <!--Lastname-->
                     <div class="form-group">
-                        <label for="lastname" class="form-label">Last name :</label>
+                        <label for="lastname">Last name :</label>
                         <input type="text" class="form-control" name="lastname" id="lastname">
                         <span class="error">* <?php echo $lastnameErr?></span>
                     </div>
@@ -78,10 +78,10 @@
                     <div>
                         <label for="gender">Gender :</label>
                         <div class="form-check-inline">
-                            <label class="form-check-label">
-                            <input type="radio" class="form-check-input " name="gender" value="male"> MALE
-                            <input type="radio" class="form-check-input" name="gender" value="female"> FEMALE
-                            <input type="radio" class="form-check-input" name="gender" value="other"> OTHER
+                            <label>
+                            <input type="radio" name="gender" value="male"> MALE
+                            <input type="radio" name="gender" value="female"> FEMALE
+                            <input type="radio" name="gender" value="other"> OTHER
                             </label>
                         </div>
                         <span class="error">* <?php echo $genderErr?></span>
@@ -89,14 +89,14 @@
 
                     <!--Email-->
                     <div class="form-group">
-                        <label for="email" class="form-label">Email address:</label>
+                        <label for="email">Email address:</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
                         <span class="error">* <?php echo $emailErr?></span>
                     </div>
 
                     <!--Country-->
                     <div class="form-group">
-                        <label for="country" class="form-label">Country :</label>
+                        <label for="country">Country :</label>
                         <select class="form-select" name="country" id="country">
                             <option disabled">Choose a country</option>
                             <?php
@@ -109,18 +109,18 @@
 
                     <!--Subject-->
                     <div class="form-group">
-                        <label for="subject" class="form-label">Subject :</label>
+                        <label for="subject">Subject :</label>
                         <select class="form-select" name="subject" id="subject">
                             <option disabled">Choose a subject</option>
-                            <option value="questions">Questions</option>
-                            <option value="comments">Comments</option>
-                            <option value="suggestions">Suggestions</option>
+                            <option>Questions</option>
+                            <option>Problems with the order</option>
+                            <option>Suggestions</option>
                         </select>
                     </div>
 
                     <!--Message-->
                     <div class="form-group">
-                        <label for="message" class="form-label">Your message :</label>
+                        <label for="message">Your message :</label>
                         <textarea class="form-control" id="textArea" rows="3" placeholder="Type your message" name="message"></textarea>
                         <span class="error">* <?php echo $messageErr?></span>
                     </div>
