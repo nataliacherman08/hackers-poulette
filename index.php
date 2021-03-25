@@ -5,6 +5,7 @@
     <meta charset='utf-8' />
     <title>Contact us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/raspberry.png">
     <link rel='stylesheet' href="assets/style/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -98,10 +99,10 @@
                     <div class="form-group">
                         <label for="country">Country :</label>
                         <select class="form-select" name="country" id="country">
-                            <option disabled">Choose a country</option>
+                            <option disabled selected>Choose your country...</option>
                             <?php
                             foreach($countries as $key => $value){
-                                echo '<option value="'.$key.'">'.$value.'</option>';
+                                echo '<option value=" - ' . $key.'">'.$value.'</option>';
                             }
                             ?>
                         </select>
@@ -111,10 +112,10 @@
                     <div class="form-group">
                         <label for="subject">Subject :</label>
                         <select class="form-select" name="subject" id="subject">
-                            <option disabled">Choose a subject</option>
-                            <option>Questions</option>
-                            <option>Problems with the order</option>
-                            <option>Suggestions</option>
+                            <option disabled selected>Open this select menu...</option>
+                            <option>- Shopping & Ordering</option>
+                            <option>- Technical support & Repair</option>
+                            <option>- Your invoice & Account</option>
                         </select>
                     </div>
 
