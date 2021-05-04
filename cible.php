@@ -5,7 +5,7 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-// define variables and set to empty values
+// Define variables and set to empty values
 $firstnameErr = $lastnameErr = $genderErr = $emailErr = $countryErr = $subjectErr = $messageErr = "";
 $firstname = $lastname = $gender = $email = $country = $subject = $message = "";
 
@@ -84,18 +84,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //?
     }
 }
-//var_dump($_POST);
 
-/*echo "<h2>Your Input:</h2>";
-echo $firstname;
-echo "<br>";
-echo $lastname;
-echo "<br>";
-echo $gender;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $subject;
-echo "<br>";
-echo $message;*/
 ?>
