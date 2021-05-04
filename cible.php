@@ -78,11 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $messageErr = "Invalid";
         }
     }
-
-    //Honeypot
-    if($_POST["honeypot"]) != "") {
-    //?
-    }
 }
 
 ?>
