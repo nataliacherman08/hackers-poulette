@@ -133,6 +133,7 @@
                     <!--Submit-->
                     <button type="submit" class="btn btn-secondary">Submit</button>
                     </form>
+                    <input name="honeypot" type="text" style="display:none;" value="" />>
         </div>
 
     <div class="theme-switch-wrapper">
