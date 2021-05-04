@@ -74,9 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $messageErr = "Message is required";
     } else {
         $message = test_input($_POST["message"]);
-        if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$message)) {
-            $messageErr = "Invalid URL";
-        } elseif (!filter_var($message, FILTER_SANITIZE_STRING)) {
+        if (!filter_var($message, FILTER_SANITIZE_STRING)) {
             $messageErr = "Invalid";
         }
     }
