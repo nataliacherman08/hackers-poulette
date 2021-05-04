@@ -46,6 +46,10 @@
   padding-left: 1rem;
 }
 
+.error {
+  color: red;
+}
+
 .right-col {
   background: var(--bg-color);
   width: 50vw;
